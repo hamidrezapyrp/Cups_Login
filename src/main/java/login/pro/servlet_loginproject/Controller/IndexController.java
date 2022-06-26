@@ -19,7 +19,7 @@ public class IndexController {
 
 
     @PostMapping(value = "/login")
-    public String login(@ModelAttribute("userdata")User user,Model mouser) {
+    public String login(@ModelAttribute("user")User user,Model mouser) {
         ArrayList<String> list = new ArrayList<>();
         if (user.getUsername().equalsIgnoreCase("hamidreza") && user.getPassword().equalsIgnoreCase("123")) {
             list.add(user.getUsername());
