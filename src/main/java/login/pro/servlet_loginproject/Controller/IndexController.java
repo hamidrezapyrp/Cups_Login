@@ -12,20 +12,22 @@ import java.util.List;
 @Controller
 public class IndexController {
     @RequestMapping(value = "/")
-    public String index(Model model){
-       model.addAttribute("user",new User());
+    public String index(Model model) {
+        model.addAttribute("user", new User());
         return "index";
     }
+
+
     @PostMapping(value = "/login")
-    public String login(@ModelAttribute("userdata")User user,Model mouser){
+    public String login(@ModelAttribute("userdata")User user,Model mouser) {
         ArrayList<String> list = new ArrayList<>();
-        if (user.getUsername().equalsIgnoreCase("hamidreza")&& user.getPassword().equalsIgnoreCase("123")){
+        if (user.getUsername().equalsIgnoreCase("hamidreza") && user.getPassword().equalsIgnoreCase("123")) {
             list.add(user.getUsername());
-            mouser.addAttribute("data",list.get(0));
+            mouser.addAttribute("data", list.get(0));
             return "content";
-        }else {
+        } else {
             return "content2";
         }
-
     }
+
 }
