@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MainUser {
-    @PostMapping(value = "/param")
-    public String param(@RequestParam(value = "username")String username,@RequestParam(value = "password")String password){
-        return username + " " + password;
-    }
-    @PostMapping(value = "/body")
-    public String body(@RequestBody String body){
-        return body;
-    }
+//    @PostMapping(value = "/param")
+//    public String param(@RequestParam(value = "username")User username,@RequestParam(value = "password")User password){
+//        return username.getUsername() + " " + password.getPassword();
+//    }
+//    @PostMapping(value = "/body")
+//    public String body(@RequestBody String body){
+//        return body;
+//    }
 }
